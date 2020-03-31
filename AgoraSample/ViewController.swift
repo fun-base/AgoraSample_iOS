@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        engine.setAudioProfile(.default, scenario: .gameStreaming)
+        engine.setAudioProfile(.default, scenario: .chatRoomGaming)
     }
     
     @IBAction private func didTapCallButton() {
