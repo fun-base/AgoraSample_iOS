@@ -28,9 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func didTapLeaveButton() {
-        let leaveResult = engine.leaveChannel(nil)
-        if leaveResult == 0 {
-        }
+        _ = engine.leaveChannel(nil)        
     }
 }
 
