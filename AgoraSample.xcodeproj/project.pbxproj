@@ -14,6 +14,7 @@
 		D364C6C12433640900AEC80D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364C6BF2433640900AEC80D /* Main.storyboard */; };
 		D364C6C32433640900AEC80D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364C6C22433640900AEC80D /* Assets.xcassets */; };
 		D364C6C62433640900AEC80D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364C6C42433640900AEC80D /* LaunchScreen.storyboard */; };
+		D39C493A2443E774003AE3F2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C49392443E774003AE3F2 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D364C6C22433640900AEC80D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D364C6C52433640900AEC80D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D364C6C72433640900AEC80D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D39C49392443E774003AE3F2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		DF7D3B3AB2D6A9581FE55D0A /* Pods-AgoraSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgoraSample.debug.xcconfig"; path = "Target Support Files/Pods-AgoraSample/Pods-AgoraSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,13 +82,14 @@
 		D364C6B82433640900AEC80D /* AgoraSample */ = {
 			isa = PBXGroup;
 			children = (
+				D364C6C72433640900AEC80D /* Info.plist */,
 				D364C6B92433640900AEC80D /* AppDelegate.swift */,
+				D39C49392443E774003AE3F2 /* Config.swift */,
 				D364C6BB2433640900AEC80D /* SceneDelegate.swift */,
 				D364C6BD2433640900AEC80D /* ViewController.swift */,
-				D364C6BF2433640900AEC80D /* Main.storyboard */,
 				D364C6C22433640900AEC80D /* Assets.xcassets */,
 				D364C6C42433640900AEC80D /* LaunchScreen.storyboard */,
-				D364C6C72433640900AEC80D /* Info.plist */,
+				D364C6BF2433640900AEC80D /* Main.storyboard */,
 			);
 			path = AgoraSample;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D364C6BE2433640900AEC80D /* ViewController.swift in Sources */,
+				D39C493A2443E774003AE3F2 /* Config.swift in Sources */,
 				D364C6BA2433640900AEC80D /* AppDelegate.swift in Sources */,
 				D364C6BC2433640900AEC80D /* SceneDelegate.swift in Sources */,
 			);

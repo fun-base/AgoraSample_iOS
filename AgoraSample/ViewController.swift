@@ -13,11 +13,11 @@ let channelId: Int = 1
 
 class ViewController: UIViewController {
     
-    lazy var engine = AgoraRtcEngineKit.sharedEngine(withAppId: "AGORA_APP_ID", delegate: self)
+    lazy var engine = AgoraRtcEngineKit.sharedEngine(withAppId: AGORA_APP_ID, delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        engine.setAudioProfile(.default, scenario: .chatRoomGaming)
+        engine.setAudioProfile(.default, scenario: .chatRoomEntertainment)
     }
     
     @IBAction private func didTapCallButton() {

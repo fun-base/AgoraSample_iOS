@@ -8,3 +8,4 @@ DerivedData/
 .build/
 
 Pods/
+Config.swift
