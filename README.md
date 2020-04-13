@@ -1,6 +1,8 @@
 # AgoraSample
 A sample app using `Agora Voice SDK` for iOS.
 
+![Image](./Resources/image.png)
+
 ## Setup 
 Need to install `AgoraRtcEngine_iOS` with `cocoapods`. Please run tha following command.
 - `pod install`
