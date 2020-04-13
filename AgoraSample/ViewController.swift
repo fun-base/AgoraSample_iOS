@@ -96,6 +96,5 @@ class ViewController: UIViewController {
 extension ViewController: AgoraRtcEngineDelegate {
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinChannel channel: String, withUid uid: UInt, elapsed: Int) {
         engine.muteLocalAudioStream(isAudioMuting)
-        engine.adjustRecordingSignalVolume(400)
     }
 }
