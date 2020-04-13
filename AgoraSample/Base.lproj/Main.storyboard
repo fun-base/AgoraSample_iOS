@@ -15,11 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-NE-rTK">
-                                <rect key="frame" x="98" y="422.5" width="218" height="51"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-NE-rTK">
+                                <rect key="frame" x="64" y="165.5" width="286" height="51"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zek-zb-Jjx">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                         <state key="normal" title="Leave">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,7 +30,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaa-Fr-kjX">
-                                        <rect key="frame" x="133" y="0.0" width="85" height="51"/>
+                                        <rect key="frame" x="177.5" y="0.0" width="108.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                         <state key="normal" title="Call"/>
                                         <connections>
@@ -39,18 +41,236 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AgoraSample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avj-vR-z1X">
-                                <rect key="frame" x="57" y="269" width="300" height="57.5"/>
+                                <rect key="frame" x="57" y="68" width="300" height="57.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="umO-XR-H9V">
+                                <rect key="frame" x="40" y="256.5" width="334" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ミュート: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-Pw-9jj">
+                                        <rect key="frame" x="0.0" y="0.0" width="269" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJy-iL-Zc2">
+                                        <rect key="frame" x="285" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="didChangeAudioMuteSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="D6t-Y9-Pq5"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-0M-3mb">
+                                <rect key="frame" x="40" y="327.5" width="334" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自分の音量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s7-DZ-s2u">
+                                        <rect key="frame" x="0.0" y="3" width="102" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="7vj-aK-Bfh">
+                                        <rect key="frame" x="116" y="0.0" width="220" height="31"/>
+                                        <connections>
+                                            <action selector="didChangeVolumeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="etx-KY-Ed2"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="wGI-Iu-OCT">
+                                <rect key="frame" x="20" y="581.5" width="374" height="112"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QJq-By-drV">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8m-OI-qcL">
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Mue-9e-VBY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <state key="normal" title="ChatRoomEntertainment"/>
+                                                <connections>
+                                                    <action selector="didTapSelectScenarioButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wdb-tk-q68"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOs-J9-YNl">
+                                                <rect key="frame" x="0.0" y="64" width="210" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="hC4-zx-g9a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <state key="normal" title="ChatRoomGaming"/>
+                                                <connections>
+                                                    <action selector="didTapSelectScenarioButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jtJ-ZH-dZ0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pr5-BA-lD6">
+                                        <rect key="frame" x="234" y="0.0" width="140" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCK-qO-ZPH">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="6Y1-lR-0ab"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <state key="normal" title="Default"/>
+                                                <connections>
+                                                    <action selector="didTapSelectScenarioButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O8l-BJ-Hwg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVV-iP-7Ja">
+                                                <rect key="frame" x="0.0" y="64" width="140" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="JJ3-RO-y3N"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <state key="normal" title="GameStreaming"/>
+                                                <connections>
+                                                    <action selector="didTapSelectScenarioButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Drf-6P-PXP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プロファイル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuR-R5-Ba7">
+                                <rect key="frame" x="8" y="381.5" width="122.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="シナリオ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vck-Vl-MQr">
+                                <rect key="frame" x="8" y="549.5" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="az3-1b-AWi">
+                                <rect key="frame" x="16" y="413.5" width="382" height="112"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="R5f-E1-RXB">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vm-XE-FDf">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="cPa-xe-OJb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <state key="normal" title="musicHighQuality"/>
+                                                <connections>
+                                                    <action selector="didTapSelectProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CyX-F7-fet"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKy-rn-7nR">
+                                                <rect key="frame" x="0.0" y="64" width="119" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Et6-cQ-YSu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <state key="normal" title="musicStandardStereo"/>
+                                                <connections>
+                                                    <action selector="didTapSelectProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOw-Aq-0Lh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kzM-gQ-FjN">
+                                        <rect key="frame" x="143" y="0.0" width="119.5" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-9V-cZz">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="gr9-GZ-cMN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <state key="normal" title="musicStandardStereo"/>
+                                                <connections>
+                                                    <action selector="didTapSelectProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kQ-Fd-RTZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vE-Av-S8z">
+                                                <rect key="frame" x="0.0" y="64" width="119.5" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="O4H-RP-V7j"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <state key="normal" title="musicStandard"/>
+                                                <connections>
+                                                    <action selector="didTapSelectProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="br6-cO-m2Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZN8-2K-OFB">
+                                        <rect key="frame" x="286.5" y="0.0" width="95.5" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adK-id-x5I">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="rBi-bk-VBt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <state key="normal" title="Default"/>
+                                                <connections>
+                                                    <action selector="didTapSelectProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7nm-vi-UfY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKV-8K-3HG">
+                                                <rect key="frame" x="0.0" y="64" width="95.5" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="dyH-VN-j6a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <state key="normal" title="speechStandard"/>
+                                                <connections>
+                                                    <action selector="didTapSelectProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSR-cC-Ak7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XUO-NE-rTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="1J7-qk-fbT"/>
+                            <constraint firstItem="umO-XR-H9V" firstAttribute="top" secondItem="XUO-NE-rTK" secondAttribute="bottom" constant="40" id="8u1-gy-Uee"/>
+                            <constraint firstItem="umO-XR-H9V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BTd-lg-7Pd"/>
+                            <constraint firstItem="ptA-0M-3mb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CN5-yy-bJr"/>
+                            <constraint firstItem="Vck-Vl-MQr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="COY-Wc-MqQ"/>
                             <constraint firstItem="XUO-NE-rTK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CXn-ya-WzG"/>
-                            <constraint firstItem="XUO-NE-rTK" firstAttribute="top" secondItem="avj-vR-z1X" secondAttribute="bottom" constant="96" id="MYe-tc-cK8"/>
+                            <constraint firstItem="wGI-Iu-OCT" firstAttribute="top" secondItem="Vck-Vl-MQr" secondAttribute="bottom" constant="8" id="GEn-HC-lt0"/>
+                            <constraint firstItem="LuR-R5-Ba7" firstAttribute="top" secondItem="ptA-0M-3mb" secondAttribute="bottom" constant="24" id="JKw-0a-uNw"/>
+                            <constraint firstItem="az3-1b-AWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oe0-Ls-rk8"/>
                             <constraint firstItem="avj-vR-z1X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PKR-e6-efp"/>
-                            <constraint firstItem="XUO-NE-rTK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZAO-sv-H7D"/>
+                            <constraint firstItem="LuR-R5-Ba7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Q1o-Si-0GV"/>
+                            <constraint firstItem="wGI-Iu-OCT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RJe-zc-QAs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="umO-XR-H9V" secondAttribute="trailing" constant="40" id="S5c-cp-vcI"/>
+                            <constraint firstItem="az3-1b-AWi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aGm-bv-xPj"/>
+                            <constraint firstItem="ptA-0M-3mb" firstAttribute="top" secondItem="umO-XR-H9V" secondAttribute="bottom" constant="40" id="dah-Ed-Gzl"/>
+                            <constraint firstItem="wGI-Iu-OCT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ifJ-Ih-xFT"/>
+                            <constraint firstItem="az3-1b-AWi" firstAttribute="top" secondItem="LuR-R5-Ba7" secondAttribute="bottom" constant="8" id="lek-wf-bTz"/>
+                            <constraint firstItem="Vck-Vl-MQr" firstAttribute="top" secondItem="az3-1b-AWi" secondAttribute="bottom" constant="24" id="mJl-jz-q4I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ptA-0M-3mb" secondAttribute="trailing" constant="40" id="tvv-wc-L1c"/>
+                            <constraint firstItem="XUO-NE-rTK" firstAttribute="top" secondItem="avj-vR-z1X" secondAttribute="bottom" constant="40" id="whK-xP-4l6"/>
+                            <constraint firstItem="avj-vR-z1X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="zUX-yK-4wc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
